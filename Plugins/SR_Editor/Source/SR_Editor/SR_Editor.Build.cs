@@ -42,6 +42,14 @@ public class SR_Editor : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"ProceduralMeshComponent",
+				"AdvancedPreviewScene",
+				"ViewportInteraction",
+				"ViewportSnapping",
+				// "LevelEditor",
+
+			
+				
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

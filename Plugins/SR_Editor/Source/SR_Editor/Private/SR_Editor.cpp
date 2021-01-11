@@ -8,6 +8,7 @@
 #include "Widgets/Layout/SBox.h"
 #include "Widgets/Text/STextBlock.h"
 #include "ToolMenus.h"
+#include "SSR_EditorViewport.h"
 
 static const FName SR_EditorTabName("SR_Editor");
 
@@ -66,11 +67,10 @@ TSharedRef<SDockTab> FSR_EditorModule::OnSpawnPluginTab(const FSpawnTabArgs& Spa
 		[
 			// Put your tab content here!
 			SNew(SBox)
-			.HAlign(HAlign_Center)
-			.VAlign(VAlign_Center)
+			.HAlign(HAlign_Fill)
+			.VAlign(VAlign_Fill)
 			[
-				SNew(STextBlock)
-				.Text(WidgetText)
+				SNew(SSR_EditorViewport)
 			]
 		];
 }
@@ -78,6 +78,8 @@ TSharedRef<SDockTab> FSR_EditorModule::OnSpawnPluginTab(const FSpawnTabArgs& Spa
 void FSR_EditorModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->InvokeTab(SR_EditorTabName);
+
+	
 }
 
 void FSR_EditorModule::RegisterMenus()
