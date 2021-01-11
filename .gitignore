@@ -10,7 +10,7 @@
 # Precompiled Headers
 *.gch
 *.pch
-
+ 
 # Compiled Dynamic libraries
 *.so
 *.dylib
@@ -72,3 +72,12 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+/.idea/.idea.LL_DemoProject/.idea/modules.xml
+/.idea/.idea.LL_DemoProject/.idea/.name
+/.idea/.idea.LL_DemoProject/.idea/contentModel.xml
+/.idea/.idea.LL_DemoProject/.idea/encodings.xml
+/.idea/.idea.LL_DemoProject/.idea/indexLayout.xml
+/.idea/.idea.LL_DemoProject/.idea/projectSettingsUpdater.xml
+/.idea/.idea.LL_DemoProject/.idea/riderModule.iml
+/.idea/.idea.LL_DemoProject/.idea/vcs.xml
+/.idea/.idea.LL_DemoProject/.idea/workspace.xml
