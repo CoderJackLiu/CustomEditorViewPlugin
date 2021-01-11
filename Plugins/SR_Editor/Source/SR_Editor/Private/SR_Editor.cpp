@@ -50,6 +50,7 @@ void FSR_EditorModule::ShutdownModule()
 	FSR_EditorCommands::Unregister();
 
 	FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(SR_EditorTabName);
+	//test for commit!
 }
 
 TSharedRef<SDockTab> FSR_EditorModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
