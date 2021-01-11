@@ -6,10 +6,12 @@
 #include "AdvancedPreviewScene.h"
 #include "SlateOptMacros.h"
 #include "SR_EditorViewportClient.h"
+#include "SR_LineTraceActor.h"
 #include "Components/DirectionalLightComponent.h"
 
 #include "Components/SkyLightComponent.h"
 #include "Atmosphere/AtmosphericFogComponent.h"
+#include "Engine/StaticMeshActor.h"
 
 BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION
 
@@ -64,6 +66,16 @@ void SSR_EditorViewport::SetPreviewMesh(UStaticMesh* InStaticMesh) const
 	EditorViewportClient->SetPreviewMesh(InStaticMesh, PreviewMeshComponent);
 }
 
+void SSR_EditorViewport::SpawnDefaultActors()
+{
+	
+	AActor* MeshActor=GetWorld()->SpawnActor<AActor>(AStaticMeshActor::StaticClass(),FTransform(FRotator(0),FVector(1000,0,0),FVector(1)));
+	
+
+	GetWorld()->SpawnActor<ASR_LineTraceActor>();
+
+	
+}
 
 
 END_SLATE_FUNCTION_BUILD_OPTIMIZATION

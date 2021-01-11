@@ -45,4 +45,8 @@ public:
 	TSharedPtr<class FAdvancedPreviewScene> PreviewScene;
 	//预览视口Client
 	TSharedPtr<class FSR_EditorViewportClient> EditorViewportClient;
+
+	void SpawnDefaultActors();
+
+	
 };
