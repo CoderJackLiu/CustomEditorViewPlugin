@@ -12,7 +12,7 @@
 #include "Components/SkyLightComponent.h"
 #include "Atmosphere/AtmosphericFogComponent.h"
 #include "Engine/StaticMeshActor.h"
-
+#include "Engine/Classes/Components/SkyAtmosphereComponent.h"
 BEGIN_SLATE_FUNCTION_BUILD_OPTIMIZATION
 
 void SSR_EditorViewport::Construct(const FArguments& InArgs)
@@ -32,7 +32,7 @@ void SSR_EditorViewport::Construct(const FArguments& InArgs)
 	USkyLightComponent* Skylight = NewObject<USkyLightComponent>();
 	PreviewScene->AddComponent(Skylight, FTransform::Identity);
 	
-	UAtmosphericFogComponent *AtmosphericFog = NewObject<UAtmosphericFogComponent>();
+	USkyAtmosphereComponent *AtmosphericFog = NewObject<USkyAtmosphereComponent>();
 	PreviewScene->AddComponent(AtmosphericFog, FTransform::Identity);
     
 	PreviewScene->DirectionalLight->SetMobility(EComponentMobility::Movable);

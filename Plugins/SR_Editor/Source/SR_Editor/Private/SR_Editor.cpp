@@ -77,7 +77,7 @@ TSharedRef<SDockTab> FSR_EditorModule::OnSpawnPluginTab(const FSpawnTabArgs& Spa
 
 void FSR_EditorModule::PluginButtonClicked()
 {
-	FGlobalTabmanager::Get()->InvokeTab(SR_EditorTabName);
+	FGlobalTabmanager::Get()->TryInvokeTab(SR_EditorTabName);
 
 	
 }
