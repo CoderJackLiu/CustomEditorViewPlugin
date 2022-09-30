@@ -2,33 +2,23 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "SR_Editor",
+	"FriendlyName": "EditorOperatorPlugin",
 	"Description": "",
 	"Category": "Other",
-	"CreatedBy": "",
+	"CreatedBy": "CoderJackLiu",
 	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"CanContainContent": false,
+	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "SR_Editor",
+			"Name": "EditorOperatorPlugin",
 			"Type": "Editor",
-			"LoadingPhase": "Default"
-		}
-	],
-	"Plugins": [
-		{
-			"Name":  "ProceduralMeshComponent",
-			"Enabled": true
-		},
-		{
-			"Name":  "EditorScriptingUtilities",
-			"Enabled": true
+			"LoadingPhase": "PostEngineInit"
 		}
 	]
 }

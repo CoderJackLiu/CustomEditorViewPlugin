@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class SR_Editor : ModuleRules
+public class EditorOperatorPlugin : ModuleRules
 {
-	public SR_Editor(ReadOnlyTargetRules Target) : base(Target)
+	public EditorOperatorPlugin(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -26,6 +26,9 @@ public class SR_Editor : ModuleRules
 			new string[]
 			{
 				"Core",
+				"UnrealEd",
+				"LevelEditor",
+				"TypedElementRuntime"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -34,22 +37,10 @@ public class SR_Editor : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Projects",
-				"InputCore",
-				"UnrealEd",
-				"ToolMenus",
 				"CoreUObject",
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"ProceduralMeshComponent",
-				"AdvancedPreviewScene",
-				"ViewportInteraction",
-				"ViewportSnapping",
-				// "LevelEditor",
-
-			
-				
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
